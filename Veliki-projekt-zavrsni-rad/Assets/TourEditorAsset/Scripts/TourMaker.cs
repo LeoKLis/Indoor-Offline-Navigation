@@ -31,23 +31,23 @@ namespace Ed
         {
 
             GUILayout.Label("Nova slika", EditorStyles.boldLabel);
-            n=EditorGUILayout.IntField("Number of clones:", n);
+            n = EditorGUILayout.IntField("Number of clones:", n);
 
             objectToSpawn = EditorGUILayout.ObjectField("Prefab sfere", objectToSpawn, typeof(GameObject), false) as GameObject;
 
             kamera = EditorGUILayout.ObjectField("Kamera:", kamera, typeof(Camera), false) as Camera;
 
             Array.Resize<Material>(ref ImageMaterial, n);
-           
+
             for (int i = 0; i < n; i++)
             {
-                ImageMaterial[i] = EditorGUILayout.ObjectField("Materijal slike broj: ", ImageMaterial[i], typeof(Material), false) as Material;
+                ImageMaterial[i] = EditorGUILayout.ObjectField("Materijal slike broj: "+i+1, ImageMaterial[i], typeof(Material), false) as Material;
             }
             if (GUILayout.Button("Stvori sliku"))
             {
-                    SpawnObject();
+                SpawnObject();
             }
-            
+
 
         }
 
