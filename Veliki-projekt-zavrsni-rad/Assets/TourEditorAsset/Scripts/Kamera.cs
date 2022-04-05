@@ -13,7 +13,7 @@ public class Kamera : MonoBehaviour
     public float minimumY = -60f;
     public float maximumY = 60f;
 
-    public float h = -180;
+    public float h = 0;
 
     float rotationY = 0f;
 

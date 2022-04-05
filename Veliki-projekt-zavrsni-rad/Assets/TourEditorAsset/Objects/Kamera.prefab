@@ -102,4 +102,4 @@ MonoBehaviour:
   maximumX: 360
   minimumY: -60
   maximumY: 60
-  h: -180
+  h: 0

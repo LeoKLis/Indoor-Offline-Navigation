@@ -68,8 +68,8 @@ namespace Ed
                 newKamera.transform.localScale = Vector3.one;
                 GameObject lightGameObject = new GameObject("The Light");
                 Light lightComp = lightGameObject.AddComponent<Light>();
-                EditorSceneManager.SaveOpenScenes();
-                EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo();
+                //EditorSceneManager.SaveOpenScenes();
+                //EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo();
                 bool saveOK = EditorSceneManager.SaveScene(EditorSceneManager.GetActiveScene(), string.Join("/", path));
                 Debug.Log(newScene.path);
                 Debug.Log("Saved Scene " + (saveOK ? "OK" : "Error!"));

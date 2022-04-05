@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-
+using UnityEditor.SceneManagement;
 public class ButtonMaker : EditorWindow
 {
     static bool active;
@@ -32,7 +32,7 @@ public class ButtonMaker : EditorWindow
             Ray ray = HandleUtility.GUIPointToWorldRay(Event.current.mousePosition);
             RaycastHit hit;
 
-           
+
             if (Physics.Raycast(ray, out hit))
             {
                 Debug.Log("Hit: " + hit.collider.gameObject.name);
@@ -42,10 +42,13 @@ public class ButtonMaker : EditorWindow
                 obj.transform.position = hit.point;
                 
                 Instantiate(obj);
+                EditorSceneManager.SaveScene(EditorSceneManager.GetActiveScene());
+                Event.current.Use();
             }
+            
         }
 
-        Event.current.Use();
+        
     }
 
     
