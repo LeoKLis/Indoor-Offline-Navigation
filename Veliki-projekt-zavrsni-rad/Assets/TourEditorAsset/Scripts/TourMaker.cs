@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEditor;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEditor.SceneManagement;
 using System;
 using System.Collections;
@@ -10,7 +12,7 @@ namespace Ed
     public class TourMaker : EditorWindow
     {
 
-
+        Vector2 scrollPosition = Vector2.zero;
         GameObject objectToSpawn;
         Material[] ImageMaterial;
         int n;
@@ -18,6 +20,7 @@ namespace Ed
         Camera kamera;
 
         [MenuItem("Tools/TourMaker")]
+       
         private static void ShowWindow()
         {
 
@@ -29,7 +32,7 @@ namespace Ed
 
         private void OnGUI()
         {
-
+            
             GUILayout.Label("Nova slika", EditorStyles.boldLabel);
             n = EditorGUILayout.IntField("Number of clones:", n);
 
@@ -38,11 +41,12 @@ namespace Ed
             kamera = EditorGUILayout.ObjectField("Kamera:", kamera, typeof(Camera), false) as Camera;
 
             Array.Resize<Material>(ref ImageMaterial, n);
-
+            scrollPosition = GUILayout.BeginScrollView(scrollPosition, true, true);
             for (int i = 0; i < n; i++)
             {
-                ImageMaterial[i] = EditorGUILayout.ObjectField("Materijal slike broj: "+i+1, ImageMaterial[i], typeof(Material), false) as Material;
+                ImageMaterial[i] = EditorGUILayout.ObjectField("Materijal slike broj: "+i, ImageMaterial[i], typeof(Material), false) as Material;
             }
+            GUILayout.EndScrollView();
             if (GUILayout.Button("Stvori sliku"))
             {
                 SpawnObject();
