@@ -1,9 +1,6 @@
 using UnityEngine;
-using System.Collections;
 public class Kamera : MonoBehaviour
 {
-  
-
     public float sensitivityX = 1.6f;
     public float sensitivityY = 1.5f;
 
@@ -16,18 +13,16 @@ public class Kamera : MonoBehaviour
     public float h = 0;
 
     float rotationY = 0f;
-
-    new readonly Rigidbody rigidbody;
+    private new readonly Rigidbody rigidbody;
+    
     void Update()
     {
         if (Input.GetMouseButton(0))
-        {
-            
-                float rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX;
-                rotationY += Input.GetAxis("Mouse Y") * sensitivityY;
-                rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
-                transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
-           
+        {            
+            float rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX * -1;
+            rotationY += Input.GetAxis("Mouse Y") * sensitivityY * -1;
+            rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
+            transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);        
         }
     }
 
@@ -35,7 +30,9 @@ public class Kamera : MonoBehaviour
     {
         transform.Rotate(h, 0, 0);
         if (rigidbody)
+        {
             rigidbody.freezeRotation = true;
+        }
     }
 
 }
