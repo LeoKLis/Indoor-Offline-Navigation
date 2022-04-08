@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79a9eab4edf626049a0cf196cda2be9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scena: 
+  scena: 4
 --- !u!64 &230501223
 MeshCollider:
   m_ObjectHideFlags: 0
