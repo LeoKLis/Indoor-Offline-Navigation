@@ -254,6 +254,8 @@ MonoBehaviour:
   minimumY: -60
   maximumY: 60
   h: 0
+  rotationY: 0
+  rotationX: 0
 --- !u!81 &704548173
 AudioListener:
   m_ObjectHideFlags: 0
@@ -333,7 +335,7 @@ GameObject:
   - component: {fileID: 1797552742}
   m_Layer: 0
   m_Name: slikaPrefab(Clone)
-  m_TagString: Untagged
+  m_TagString: Image
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

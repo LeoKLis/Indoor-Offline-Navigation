@@ -16,7 +16,7 @@ public class Pomicanje : MonoBehaviour
                 //Replace this with whatever logic you want to use to validate the objects you want to click on
                 if (hit.collider.gameObject.CompareTag("Gumb"))
                 {
-                    Debug.Log("Dela");
+                    //Debug.Log("Dela");
                     SceneManager.LoadScene(scena);
                 }
             }

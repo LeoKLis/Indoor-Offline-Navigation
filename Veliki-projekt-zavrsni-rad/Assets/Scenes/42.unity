@@ -229,6 +229,7 @@ GameObject:
   - component: {fileID: 107973526}
   - component: {fileID: 107973525}
   - component: {fileID: 107973524}
+  - component: {fileID: 107973529}
   m_Layer: 0
   m_Name: Gumb(Clone)
   m_TagString: Gumb
@@ -326,6 +327,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &107973529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107973523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ca9a76e90f31e48adbed4e5209e6e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &175732394
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,6 +377,8 @@ MonoBehaviour:
   minimumY: -60
   maximumY: 60
   h: 0
+  rotationY: 0
+  rotationX: 0
 --- !u!81 &175732396
 AudioListener:
   m_ObjectHideFlags: 0
@@ -442,6 +457,7 @@ GameObject:
   - component: {fileID: 264923333}
   - component: {fileID: 264923332}
   - component: {fileID: 264923331}
+  - component: {fileID: 264923336}
   m_Layer: 0
   m_Name: Gumb(Clone)
   m_TagString: Gumb
@@ -539,6 +555,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &264923336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 264923330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ca9a76e90f31e48adbed4e5209e6e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1426473845
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,6 +580,7 @@ GameObject:
   - component: {fileID: 1426473848}
   - component: {fileID: 1426473847}
   - component: {fileID: 1426473846}
+  - component: {fileID: 1426473851}
   m_Layer: 0
   m_Name: Gumb(Clone)
   m_TagString: Gumb
@@ -649,6 +678,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1426473851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426473845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ca9a76e90f31e48adbed4e5209e6e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1545895324
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,7 +704,7 @@ GameObject:
   - component: {fileID: 1545895325}
   m_Layer: 0
   m_Name: slikaPrefab(Clone)
-  m_TagString: Untagged
+  m_TagString: Image
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

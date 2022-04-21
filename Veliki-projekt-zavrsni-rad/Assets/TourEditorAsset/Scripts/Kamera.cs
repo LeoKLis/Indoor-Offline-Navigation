@@ -13,27 +13,28 @@ public class Kamera : MonoBehaviour
 
     public float h = 0;
 
-    float rotationY = 0f;
+    public static float rotationY;
+    public static float rotationX;
+
     private new readonly Rigidbody rigidbody;
     
     void Update()
     {
         if (Input.GetMouseButton(0))
-        {            
-            float rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX * -1;
+        {
+            rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX * -1;
             rotationY += Input.GetAxis("Mouse Y") * sensitivityY * -1;
             rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
-            transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);        
+            transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
         }
     }
 
     void Start()
     {
-        transform.Rotate(h, 0, 0);
+        transform.Rotate(-rotationY, rotationX, 0);
         if (rigidbody)
         {
             rigidbody.freezeRotation = true;
         }
     }
-
 }

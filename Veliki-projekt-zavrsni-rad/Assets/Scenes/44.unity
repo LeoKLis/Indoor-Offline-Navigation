@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 512392788}
   m_Layer: 0
   m_Name: slikaPrefab(Clone)
-  m_TagString: Untagged
+  m_TagString: Image
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -325,6 +325,7 @@ GameObject:
   - component: {fileID: 916875484}
   - component: {fileID: 916875483}
   - component: {fileID: 916875482}
+  - component: {fileID: 916875487}
   m_Layer: 0
   m_Name: Gumb(Clone)
   m_TagString: Gumb
@@ -422,6 +423,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &916875487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916875481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ca9a76e90f31e48adbed4e5209e6e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1421758175
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,6 +448,7 @@ GameObject:
   - component: {fileID: 1421758178}
   - component: {fileID: 1421758177}
   - component: {fileID: 1421758176}
+  - component: {fileID: 1421758181}
   m_Layer: 0
   m_Name: Gumb(Clone)
   m_TagString: Gumb
@@ -532,6 +546,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1421758181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421758175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9ca9a76e90f31e48adbed4e5209e6e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1758624760
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,6 +596,8 @@ MonoBehaviour:
   minimumY: -60
   maximumY: 60
   h: 0
+  rotationY: 0
+  rotationX: 0
 --- !u!81 &1758624762
 AudioListener:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6366397796390713485}
   m_Layer: 0
   m_Name: slikaPrefab
-  m_TagString: Untagged
+  m_TagString: Image
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
