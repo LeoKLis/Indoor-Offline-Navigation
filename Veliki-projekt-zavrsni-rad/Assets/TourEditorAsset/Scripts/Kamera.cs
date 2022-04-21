@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 public class Kamera : MonoBehaviour
 {
     public float sensitivityX = 1.6f;
