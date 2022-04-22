@@ -17,17 +17,6 @@ public class Kamera : MonoBehaviour
     public static float rotationX;
 
     private new readonly Rigidbody rigidbody;
-    
-    void Update()
-    {
-        if (Input.GetMouseButton(0))
-        {
-            rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX * -1;
-            rotationY += Input.GetAxis("Mouse Y") * sensitivityY * -1;
-            rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
-            transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
-        }
-    }
 
     void Start()
     {
@@ -36,5 +25,27 @@ public class Kamera : MonoBehaviour
         {
             rigidbody.freezeRotation = true;
         }
+    }
+
+    void Update()
+    {
+#if UNITY_ANDROID
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+            rotationX = transform.localEulerAngles.y + touch.deltaPosition.x * sensitivityX/40 * -1;
+            rotationY += touch.deltaPosition.y * sensitivityY/40 * -1;
+            rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
+            transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
+        }
+#elif UNITY_EDITOR_WIN
+        if (Input.GetMouseButton(0))
+        {
+            rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX * -1;
+            rotationY += Input.GetAxis("Mouse Y") * sensitivityY * -1;
+            rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
+            transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
+        }
+#endif
     }
 }
