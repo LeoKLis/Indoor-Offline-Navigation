@@ -29,7 +29,7 @@ public class Kamera : MonoBehaviour
 
     void Update()
     {
-#if UNITY_ANDROID
+//#if UNITY_ANDROID
         if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
@@ -38,14 +38,14 @@ public class Kamera : MonoBehaviour
             rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
             transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
         }
-#elif UNITY_EDITOR_WIN
-        if (Input.GetMouseButton(0))
+//#elif UNITY_EDITOR_WIN
+        /*if (Input.GetMouseButton(0))
         {
             rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX * -1;
             rotationY += Input.GetAxis("Mouse Y") * sensitivityY * -1;
             rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
             transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
-        }
-#endif
+        }*/
+//#endif
     }
 }
