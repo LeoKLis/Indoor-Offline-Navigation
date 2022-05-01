@@ -6,7 +6,25 @@ using UnityEngine.UI;
 public class TweenMove : MonoBehaviour
 {
     public Button hideMenu;
-    int hideCnt = 0;
+    static int hideCnt = 0;
+
+    private void Start()
+    {
+        Debug.Log("Start");
+        if (hideCnt == 0)
+        {
+            LeanTween.moveY(gameObject, 135, 0f);
+        }
+        else if (hideCnt == 1)
+        {
+            LeanTween.moveY(gameObject, -135, 0f);
+        }
+        else
+        {
+            Debug.Log("Ne dela");
+        }
+    }
+
     void Awake()
     {
         hideMenu.onClick.AddListener(HideMenuClick);    
