@@ -45,3 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Buttons: []
   myGraph: {fileID: 4162061115437305352, guid: 9dcc2b31d0d6d6b4781685ee36316ce1, type: 3}
+  materijal: {fileID: 2100000, guid: 8796aa67e2209f544915563baa621219, type: 2}

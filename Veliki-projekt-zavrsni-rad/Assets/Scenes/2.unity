@@ -454,7 +454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scena: 1
   myGraph: {fileID: 4162061115437305352, guid: 9dcc2b31d0d6d6b4781685ee36316ce1, type: 3}
-  Buttons: []
+  gameObjects: []
 --- !u!64 &1248096821
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -672,7 +672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scena: 3
   myGraph: {fileID: 4162061115437305352, guid: 9dcc2b31d0d6d6b4781685ee36316ce1, type: 3}
-  Buttons: []
+  gameObjects: []
 --- !u!64 &1615913493
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -830,6 +830,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: gumbi
       objectReference: {fileID: 0}
+    - target: {fileID: 4599804901295199620, guid: 34f83959da1d4d240a84c821212feed0, type: 3}
+      propertyPath: materijal
+      value: 
+      objectReference: {fileID: 2100000, guid: 8796aa67e2209f544915563baa621219, type: 2}
     - target: {fileID: 4599804901295199621, guid: 34f83959da1d4d240a84c821212feed0, type: 3}
       propertyPath: m_RootOrder
       value: 7
