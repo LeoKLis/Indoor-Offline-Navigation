@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class Settings : MonoBehaviour
 {
     public Button settingsButton;
-    public GameObject settingsCanvas;
+    //public GameObject settingsCanvas;
     public GameObject settingsS;
 
     static int settingsCunt = 1;
 
     private void Start()
     {
-        settingsCanvas.transform.localPosition = new Vector3(Screen.width, 0);
+        //settingsCanvas.transform.localPosition = new Vector3(Screen.width, 0);
         if (settingsCunt == 0)
         {
             LeanTween.moveX(settingsS, -Screen.width * 2, 0f);
