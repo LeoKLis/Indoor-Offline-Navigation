@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class SearchField : MonoBehaviour
 {
+    public RectTransform searchMenu;
     public Button hideSearch;
     static int srcCnt = 0;
 
@@ -12,11 +13,11 @@ public class SearchField : MonoBehaviour
     {
         if (srcCnt == 0)
         {
-            LeanTween.moveY(gameObject, 3500, 0f);
+            LeanTween.moveY(gameObject, Screen.height + searchMenu.sizeDelta.y / 2, 0f);
         }
         else if (srcCnt == 1)
         {
-            LeanTween.moveY(gameObject, 2600, 0f);
+            LeanTween.moveY(gameObject, Screen.height * 0.85f, 0f);
         }
         else
         {
@@ -33,12 +34,12 @@ public class SearchField : MonoBehaviour
     {
         if (srcCnt == 0)
         {
-            LeanTween.moveY(gameObject, 2600, 0.5f);
+            LeanTween.moveY(gameObject, Screen.height * 0.85f, 0.5f);
             srcCnt++;
         }
         else if (srcCnt == 1)
         {
-            LeanTween.moveY(gameObject, 3500, 0.5f);
+            LeanTween.moveY(gameObject, Screen.height + searchMenu.sizeDelta.y/2, 0.5f);
             srcCnt--;
         }
         else

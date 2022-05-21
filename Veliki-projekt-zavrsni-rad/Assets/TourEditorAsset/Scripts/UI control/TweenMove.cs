@@ -12,7 +12,7 @@ public class TweenMove : MonoBehaviour
     {
         if (hideCnt == 0)
         {
-            LeanTween.moveY(gameObject, 135, 0f);
+            LeanTween.moveY(gameObject, 0, 0f);
         }
         else if (hideCnt == 1)
         {
@@ -38,7 +38,7 @@ public class TweenMove : MonoBehaviour
         }
         else if(hideCnt == 1)
         {
-            LeanTween.moveY(gameObject, 135, 0.5f);
+            LeanTween.moveY(gameObject, 115, 0.5f);
             hideCnt--;
         }
         else
