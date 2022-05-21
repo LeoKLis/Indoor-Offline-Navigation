@@ -10,7 +10,6 @@ public class TweenMove : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Start");
         if (hideCnt == 0)
         {
             LeanTween.moveY(gameObject, 135, 0f);
