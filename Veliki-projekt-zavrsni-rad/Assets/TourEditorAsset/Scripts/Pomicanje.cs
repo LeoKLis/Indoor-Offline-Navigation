@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,8 +8,12 @@ public class Pomicanje : MonoBehaviour
     int index;
     public Graph myGraph;
     public GameObject[] gameObjects;
+    public static string rotCheck;
     Prepoznavanje prepoznavanje;
     // Update is called once per frame
+    //Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, Camera.main.fieldOfView - 50, 0.5f);
+
+
     void OnMouseDown()
     {
         if (Input.GetMouseButtonDown(0))
@@ -22,19 +27,12 @@ public class Pomicanje : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 100.0f))
             {
 
-                //Replace this with whatever logic you want to use to validate the objects you want to click on
-
-                if (hit.collider.gameObject.CompareTag("Gumb"))
+                if (hit.collider.gameObject.CompareTag("Gumb1") || hit.collider.gameObject.CompareTag("Gumb2") || hit.collider.gameObject.CompareTag("Gumb3"))
                 {
-                    //Debug.Log("Dela");
-                   
-                   
+                    rotCheck = gameObject.tag;
                     SceneManager.LoadScene(scena);
-                    //Debug.Log("scena" + scena);
-                    
-                        for (int i=0;i<myGraph.nodes.Count;i++)
+                    for (int i=0;i<myGraph.nodes.Count;i++)
                     {
-                        //Debug.Log(myGraph.nodes[i].ToString() + " || " + scena + " (Node)");
                         if(myGraph.nodes[i].ToString()==scena+" (Node)")
                         {
                             index = i;
@@ -42,7 +40,7 @@ public class Pomicanje : MonoBehaviour
                     }
                     //Debug.Log("index: " + index+" "+myGraph.nodes[index] );
                     Path path = myGraph.GetShortestPath(myGraph.nodes[index], myGraph.nodes[30]);
-                    Debug.Log("Slijedeci korak: " + path.nodes[1]);
+                    //Debug.Log("Slijedeci korak: " + path.nodes[1]);
                     Prepoznavanje kod;
                     
                     
@@ -69,5 +67,10 @@ public class Pomicanje : MonoBehaviour
             }
 
         }
+    }
+
+    public string GetCheck()
+    {
+        return rotCheck;
     }
 }

@@ -8,6 +8,9 @@ TagManager:
   - Slikica
   - Gumb
   - Image
+  - Gumb1
+  - Gumb2
+  - Gumb3
   layers:
   - Default
   - TransparentFX

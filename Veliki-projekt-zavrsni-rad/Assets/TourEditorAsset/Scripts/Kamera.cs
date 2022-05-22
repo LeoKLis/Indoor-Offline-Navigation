@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class Kamera : MonoBehaviour
 {
     public float sensitivityX = 1.6f;
@@ -16,11 +17,49 @@ public class Kamera : MonoBehaviour
     public static float rotationY;
     public static float rotationX;
 
+    public GameObject target;
+
     private new readonly Rigidbody rigidbody;
+
+    Pomicanje var = new Pomicanje();
 
     void Start()
     {
-        transform.Rotate(-rotationY, rotationX, 0);
+        if(var.GetCheck() == "Gumb1")
+        {
+            if (GameObject.FindGameObjectWithTag("Gumb1"))
+            {
+                target = GameObject.FindGameObjectWithTag("Gumb1");
+            }
+            else
+            {
+                target = GameObject.FindGameObjectWithTag("Gumb2");
+            }
+            
+        }
+        else if (var.GetCheck() == "Gumb2")
+        {
+            if (GameObject.FindGameObjectWithTag("Gumb2"))
+            {
+                target = GameObject.FindGameObjectWithTag("Gumb2");
+            }
+            else
+            {
+                target = GameObject.FindGameObjectWithTag("Gumb1");
+            }
+        }
+        else if (var.GetCheck() == "Gumb3")
+        {
+            target = GameObject.FindGameObjectWithTag("Gumb1");
+        }
+        else
+        {
+            Debug.Log("Onda ne radi");
+        }
+        
+        Vector3 targetDir = target.transform.position - transform.position;
+        Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, 5, 0.0f);
+        transform.rotation = Quaternion.LookRotation(newDir);
         if (rigidbody)
         {
             rigidbody.freezeRotation = true;

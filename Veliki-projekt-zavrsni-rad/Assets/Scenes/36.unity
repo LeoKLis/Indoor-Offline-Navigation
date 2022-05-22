@@ -504,6 +504,7 @@ MonoBehaviour:
   minimumY: -60
   maximumY: 60
   h: 0
+  target: {fileID: 0}
 --- !u!81 &1145301696
 AudioListener:
   m_ObjectHideFlags: 0
@@ -585,7 +586,7 @@ GameObject:
   - component: {fileID: 1717782571}
   m_Layer: 0
   m_Name: Gumb(Clone)
-  m_TagString: Gumb
+  m_TagString: Gumb1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

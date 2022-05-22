@@ -23,25 +23,20 @@ public class Prepoznavanje : MonoBehaviour
                 index = i;
             }
         }
+
         Path path = myGraph.GetShortestPath(myGraph.nodes[index], myGraph.nodes[30]);
         int d = 0;
         Debug.Log("scena" + scena.name);
         foreach (GameObject i in Buttons)
         {
-
             pomicanje = Buttons[d].GetComponent<Pomicanje>();
             //Debug.Log(pomicanje.scena + " Mozda dela");
-            Debug.Log(pomicanje.scena + " ||| " + path.nodes[1].ToString());
+            //Debug.Log(pomicanje.scena + " ||| " + path.nodes[1].ToString());
             if(pomicanje.scena+" (Node)"==path.nodes[1].ToString())
             {
-                Debug.Log(Buttons[d] + " daj bože");
+                //Debug.Log(Buttons[d] + " daj bože");
                 Buttons[d].GetComponent<MeshRenderer>().material=materijal;
-                
-                
-            }
-            
-
-            
+            }            
             d++;
         }
     }

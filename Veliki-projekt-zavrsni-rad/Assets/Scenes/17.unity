@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 219615461}
   m_Layer: 0
   m_Name: Gumb(Clone)
-  m_TagString: Gumb
+  m_TagString: Gumb1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -286,6 +286,7 @@ MonoBehaviour:
   minimumY: -60
   maximumY: 60
   h: 0
+  target: {fileID: 0}
 --- !u!81 &1186015046
 AudioListener:
   m_ObjectHideFlags: 0
@@ -767,7 +768,7 @@ GameObject:
   - component: {fileID: 2089222950}
   m_Layer: 0
   m_Name: Gumb(Clone)
-  m_TagString: Gumb
+  m_TagString: Gumb2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
