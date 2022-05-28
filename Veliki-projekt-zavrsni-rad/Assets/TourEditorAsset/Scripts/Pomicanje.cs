@@ -8,11 +8,8 @@ public class Pomicanje : MonoBehaviour
     int index;
     public Graph myGraph;
     public GameObject[] gameObjects;
-    public static string rotCheck;
+    public static string rotCheck = " ";
     Prepoznavanje prepoznavanje;
-    // Update is called once per frame
-    //Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, Camera.main.fieldOfView - 50, 0.5f);
-
 
     void OnMouseDown()
     {
@@ -22,11 +19,10 @@ public class Pomicanje : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             
             
-            int a = 0;
+            //int a = 0;
             
             if (Physics.Raycast(ray, out hit, 100.0f))
             {
-
                 if (hit.collider.gameObject.CompareTag("Gumb1") || hit.collider.gameObject.CompareTag("Gumb2") || hit.collider.gameObject.CompareTag("Gumb3"))
                 {
                     rotCheck = gameObject.tag;
@@ -41,10 +37,9 @@ public class Pomicanje : MonoBehaviour
                     //Debug.Log("index: " + index+" "+myGraph.nodes[index] );
                     Path path = myGraph.GetShortestPath(myGraph.nodes[index], myGraph.nodes[30]);
                     //Debug.Log("Slijedeci korak: " + path.nodes[1]);
-                    Prepoznavanje kod;
-                    
-                    
-                    
+                    //Prepoznavanje kod;
+
+
 
                     /*for (int i = 0; i < path.nodes.Count; i++)
                     {

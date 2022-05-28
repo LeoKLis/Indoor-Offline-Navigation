@@ -13,7 +13,7 @@ public class GraphEditor : Editor
 	protected Node m_To;
 	protected Follower m_Follower;
 	protected Path m_Path = new Path ();
-	int flag = 0;
+	//int flag = 0;
 
 	void OnEnable ()
 	{

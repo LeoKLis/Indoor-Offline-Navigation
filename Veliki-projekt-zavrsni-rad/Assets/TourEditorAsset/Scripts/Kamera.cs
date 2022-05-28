@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -21,10 +22,10 @@ public class Kamera : MonoBehaviour
 
     private new readonly Rigidbody rigidbody;
 
-    Pomicanje var = new Pomicanje();
-
     void Start()
     {
+        target = GameObject.FindGameObjectWithTag("Gumb1");
+        Pomicanje var = FindObjectOfType<Pomicanje>();
         if(var.GetCheck() == "Gumb1")
         {
             if (GameObject.FindGameObjectWithTag("Gumb1"))
@@ -81,9 +82,8 @@ public class Kamera : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX * -1;
-            rotationY += Input.GetAxis("Mouse Y") * sensitivityY * -1;
-            rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
-            transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
+            rotationY = transform.localEulerAngles.x + Input.GetAxis("Mouse Y") * sensitivityY;
+            transform.localEulerAngles = new Vector3(rotationY, rotationX, 0);
         }
 //#endif
     }
