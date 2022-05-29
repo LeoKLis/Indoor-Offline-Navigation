@@ -221,7 +221,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28337339}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4711208715938537054, guid: e770b6251ffb411469edbd98fd552d97, type: 3}
 --- !u!4 &28337344
 Transform:
   m_ObjectHideFlags: 0
@@ -618,6 +618,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7961058347138510289, guid: 4ebe7e197bddd8c449f896612691bc88, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 85
+      objectReference: {fileID: 0}
     - target: {fileID: 7961058348297739416, guid: 4ebe7e197bddd8c449f896612691bc88, type: 3}
       propertyPath: m_Name
       value: NavUI
@@ -705,6 +709,14 @@ PrefabInstance:
     - target: {fileID: 7961058348297739420, guid: 4ebe7e197bddd8c449f896612691bc88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7961058348570988500, guid: 4ebe7e197bddd8c449f896612691bc88, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7961058348570988500, guid: 4ebe7e197bddd8c449f896612691bc88, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 74
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ebe7e197bddd8c449f896612691bc88, type: 3}

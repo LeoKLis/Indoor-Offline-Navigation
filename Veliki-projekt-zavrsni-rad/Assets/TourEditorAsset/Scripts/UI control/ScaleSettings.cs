@@ -16,6 +16,7 @@ public class ScaleSettings : MonoBehaviour
     void Start()
     {
         settingsMenu.sizeDelta = new Vector2(Screen.width, Screen.height);
+        settingsMenu.position = new Vector2(Screen.width, Screen.height / 2);
         LeanTween.moveX(settingsMenu, -Screen.width, 0f);
 
         textP.sizeDelta = new Vector2(Screen.width * 0.85f, Screen.height / 12f);

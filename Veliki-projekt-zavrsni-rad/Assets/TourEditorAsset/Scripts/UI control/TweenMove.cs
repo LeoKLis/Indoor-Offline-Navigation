@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TweenMove : MonoBehaviour
 {
     public Button hideMenu;
+    public RectTransform menuAll;
     static int hideCnt = 0;
 
     private void Start()
@@ -16,7 +17,7 @@ public class TweenMove : MonoBehaviour
         }
         else if (hideCnt == 1)
         {
-            LeanTween.moveY(gameObject, -135, 0f);
+            LeanTween.moveY(gameObject, -menuAll.rect.height, 0f);
         }
         else
         {
@@ -33,12 +34,12 @@ public class TweenMove : MonoBehaviour
     {
         if(hideCnt == 0)
         {
-            LeanTween.moveY(gameObject, -135, 0.5f);
+            LeanTween.moveY(gameObject, -menuAll.rect.height, 0.5f);
             hideCnt++;
         }
         else if(hideCnt == 1)
         {
-            LeanTween.moveY(gameObject, 115, 0.5f);
+            LeanTween.moveY(gameObject, 0, 0.5f);
             hideCnt--;
         }
         else
