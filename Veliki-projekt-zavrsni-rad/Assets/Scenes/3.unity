@@ -787,6 +787,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1245660878621981954, guid: 4ebe7e197bddd8c449f896612691bc88, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 5.7332
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245660878621981954, guid: 4ebe7e197bddd8c449f896612691bc88, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 231.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7961058348297739416, guid: 4ebe7e197bddd8c449f896612691bc88, type: 3}
       propertyPath: m_Name
       value: NavUI

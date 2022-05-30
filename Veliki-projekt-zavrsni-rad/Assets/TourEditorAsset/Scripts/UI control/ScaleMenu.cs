@@ -7,13 +7,9 @@ public class ScaleMenu : MonoBehaviour
     public RectTransform menu;
     public RectTransform searchButton;
     public RectTransform setButton;
-
-    //public RectTransform settingsCanvas;
-    public RectTransform banner;
+    public RectTransform mapButton;
 
     public RectTransform searchBar;
-    //public RectTransform settingsText;
-    public RectTransform firstOption;
     void Start()
     {
         menu.sizeDelta = new Vector2(Screen.width, Screen.height/10);
@@ -23,6 +19,9 @@ public class ScaleMenu : MonoBehaviour
 
         setButton.localScale = new Vector2(menu.sizeDelta.x / 700, menu.sizeDelta.x / 700);
         setButton.anchoredPosition = new Vector2(menu.sizeDelta.x / 4, 0);
+
+        mapButton.localScale = new Vector2(menu.sizeDelta.x / 700, menu.sizeDelta.x / 700);
+        mapButton.anchoredPosition = new Vector2(0, 0);
 
         //settingsCanvas.sizeDelta = new Vector2(Screen.width, Screen.height);
 

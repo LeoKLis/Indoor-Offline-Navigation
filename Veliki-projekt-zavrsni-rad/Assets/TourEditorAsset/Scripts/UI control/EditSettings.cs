@@ -24,6 +24,7 @@ public class EditSettings : MonoBehaviour
     {
         if (dark)
         {
+            darkMode.isOn = true;
             menu.color = new Color32(28, 28, 28, 255);
             buttonHide.color = new Color32(28, 28, 28, 255);
             searchField.color = new Color32(28, 28, 28, 255);
@@ -36,6 +37,7 @@ public class EditSettings : MonoBehaviour
         }
         else
         {
+            darkMode.isOn = false;
             menu.color = new Color32(255, 255, 255, 255);
             buttonHide.color = new Color32(255, 255, 255, 255);
             searchField.color = new Color32(255, 255, 255, 255);

@@ -6,8 +6,11 @@ using UnityEngine.UI;
 public class TweenMove : MonoBehaviour
 {
     public Button hideMenu;
+    public Button hideMap;
     public RectTransform menuAll;
+    public GameObject minimap;
     static int hideCnt = 0;
+    static bool mapHid;
 
     private void Start()
     {
@@ -23,11 +26,20 @@ public class TweenMove : MonoBehaviour
         {
             Debug.Log("Ne dela");
         }
+
+        if (mapHid) {
+            minimap.SetActive(false);
+        }
+        else
+        {
+            minimap.SetActive(true);
+        }
     }
 
     void Awake()
     {
-        hideMenu.onClick.AddListener(HideMenuClick);    
+        hideMenu.onClick.AddListener(HideMenuClick);
+        hideMap.onClick.AddListener(HideMap);
     }
 
     void HideMenuClick()
@@ -48,5 +60,18 @@ public class TweenMove : MonoBehaviour
         }
     }
 
+    void HideMap()
+    {
+        if (!mapHid)
+        {
+            minimap.SetActive(false);
+            mapHid = true;
+        }
+        else
+        {
+            minimap.SetActive(true);
+            mapHid = false;
+        }
+    }
     
 }
