@@ -11,6 +11,7 @@ TagManager:
   - Gumb1
   - Gumb2
   - Gumb3
+  - tekst
   layers:
   - Default
   - TransparentFX

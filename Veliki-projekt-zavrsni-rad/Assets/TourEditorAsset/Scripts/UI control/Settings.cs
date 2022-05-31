@@ -5,49 +5,66 @@ using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
 {
-    public Button settingsButton;
-    //public GameObject settingsCanvas;
-    public GameObject settingsS;
+    static bool dark;
+    public Button darkMode;
+    public Image menu;
+    public Image buttonHide;
+    public Image searchField;
+    public Text placeholder;
+    public Text label;
 
-    static int settingsCunt = 1;
+    public Material gumbBoja;
 
     private void Start()
     {
-        //settingsCanvas.transform.localPosition = new Vector3(Screen.width, 0);
-        if (settingsCunt == 0)
+        if (dark)
         {
-            LeanTween.moveX(settingsS, -Screen.width * 2, 0f);
-        }
-        else if (settingsCunt == 1)
-        {
-            LeanTween.moveX(settingsS, Screen.width / 2, 0f);
+            menu.color = new Color32(28, 28, 28, 255);
+            buttonHide.color = new Color32(28, 28, 28, 255);
+            searchField.color = new Color32(28, 28, 28, 255);
+            placeholder.color = new Color32(200, 200, 200, 255);
+            label.color = new Color32(200, 200, 200, 255);
+            gumbBoja.color = new Color32(9, 21, 34, 128);
         }
         else
         {
-            Debug.Log("Onda ne radi");
+            menu.color = new Color32(255, 255, 255, 255);
+            buttonHide.color = new Color32(255, 255, 255, 255);
+            searchField.color = new Color32(255, 255, 255, 255);
+            placeholder.color = new Color32(50, 50, 50, 128);
+            label.color = new Color32(50, 50, 50, 128);
+            gumbBoja.color = new Color32(37, 125, 226, 128);
         }
     }
 
     void Awake()
     {
-        settingsButton.onClick.AddListener(OnClickSettings);
+        darkMode.onClick.AddListener(delegate { ToggleValueChanged(); });
     }
 
-    void OnClickSettings()
+    void ToggleValueChanged()
     {
-        if(settingsCunt == 1)
+        if (!dark)
         {
-            LeanTween.moveX(settingsS, -Screen.width/2, 0.8f);
-            settingsCunt--;
-        }
-        else if(settingsCunt == 0)
-        {
-            LeanTween.moveX(settingsS, Screen.width/2, 0.8f);
-            settingsCunt++;
+            menu.color = new Color32(28, 28, 28, 255);
+            buttonHide.color = new Color32(28, 28, 28, 255);
+            searchField.color = new Color32(40, 40, 40, 255);
+            placeholder.color = new Color32(200, 200, 200, 255);
+            label.color = new Color32(200, 200, 200, 255);
+            gumbBoja.color = new Color32(9, 21, 34, 128);
+
+            dark = true;
         }
         else
         {
-            Debug.Log("Onda ne radi");
+            menu.color = new Color32(255, 255, 255, 255);
+            buttonHide.color = new Color32(255, 255, 255, 255);
+            searchField.color = new Color32(255, 255, 255, 255);
+            placeholder.color = new Color32(50, 50, 50, 128);
+            label.color = new Color32(50, 50, 50, 128);
+            gumbBoja.color = new Color32(37, 125, 226, 128);
+
+            dark = false;
         }
     }
 }

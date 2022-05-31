@@ -7,20 +7,9 @@ public class MinimapLocation : MonoBehaviour
 {
     public RectTransform location;
     public RectTransform canv;
-    static bool isLarge;
     void Start()
     {
         Scene scene = SceneManager.GetActiveScene();
-        if (isLarge)
-        {
-            canv.LeanScale(new Vector3(2, 2), 0f);
-            canv.LeanMove(new Vector3(-canv.sizeDelta.x, -canv.sizeDelta.y, 0), 0f);
-        }
-        else
-        {
-            canv.LeanScale(new Vector3(1, 1), 0f);
-            canv.LeanMove(new Vector3(-canv.sizeDelta.x / 2, -canv.sizeDelta.y / 2, 0), 0f);
-        }
 
         if (scene.name == "1")
         {
@@ -221,22 +210,6 @@ public class MinimapLocation : MonoBehaviour
         if(scene.name == "51")
         {
             location.anchoredPosition = new Vector2(257.9f, -204.6f);
-        }
-    }
-
-    public void ChangeSize()
-    {
-        if (!isLarge)
-        {
-            canv.LeanScale(new Vector3(Screen.width / canv.sizeDelta.x, Screen.width / canv.sizeDelta.y), 0.3f);
-            canv.LeanMove(new Vector3(-canv.sizeDelta.x * 1.2f, -canv.sizeDelta.y * 1.2f, 0), 0.3f);
-            isLarge = true;
-        }
-        else
-        {
-            canv.LeanScale(new Vector3(1, 1), 0.3f);
-            canv.LeanMove(new Vector3(-canv.sizeDelta.x / 2f, -canv.sizeDelta.y / 2f, 0), 0.3f);
-            isLarge = false;
         }
     }
 }
