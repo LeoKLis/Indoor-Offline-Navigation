@@ -14,13 +14,13 @@ public class ScaleMenu : MonoBehaviour
     {
         menu.sizeDelta = new Vector2(Screen.width, Screen.height/10);
         
-        searchButton.localScale = new Vector2(menu.sizeDelta.x / 700, menu.sizeDelta.x / 700);
+        searchButton.sizeDelta = new Vector2(menu.sizeDelta.y / 1.8f, menu.sizeDelta.y / 1.8f);
         searchButton.anchoredPosition = new Vector2(-menu.sizeDelta.x / 4, 0);
 
-        setButton.localScale = new Vector2(menu.sizeDelta.x / 700, menu.sizeDelta.x / 700);
+        setButton.sizeDelta = new Vector2(menu.sizeDelta.y / 1.8f, menu.sizeDelta.y / 1.8f);
         setButton.anchoredPosition = new Vector2(menu.sizeDelta.x / 4, 0);
 
-        mapButton.localScale = new Vector2(menu.sizeDelta.x / 700, menu.sizeDelta.x / 700);
+        mapButton.sizeDelta = new Vector2(menu.sizeDelta.y / 1.8f, menu.sizeDelta.y / 1.8f);
         mapButton.anchoredPosition = new Vector2(0, 0);
 
         //settingsCanvas.sizeDelta = new Vector2(Screen.width, Screen.height);

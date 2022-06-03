@@ -52,7 +52,6 @@ public class Settings : MonoBehaviour
             placeholder.color = new Color32(200, 200, 200, 255);
             label.color = new Color32(200, 200, 200, 255);
             gumbBoja.color = new Color32(9, 21, 34, 128);
-
             dark = true;
         }
         else
@@ -63,7 +62,6 @@ public class Settings : MonoBehaviour
             placeholder.color = new Color32(50, 50, 50, 128);
             label.color = new Color32(50, 50, 50, 128);
             gumbBoja.color = new Color32(37, 125, 226, 128);
-
             dark = false;
         }
     }

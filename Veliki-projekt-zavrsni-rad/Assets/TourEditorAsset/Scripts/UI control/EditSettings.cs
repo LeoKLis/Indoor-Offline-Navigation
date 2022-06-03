@@ -18,10 +18,11 @@ public class EditSettings : MonoBehaviour
     public Text darkModeLabel;
 
     public Material gumbBoja;
+
     // Update is called once per frame
 
     private void Start()
-    {
+    {       
         if (dark)
         {
             darkMode.isOn = true;

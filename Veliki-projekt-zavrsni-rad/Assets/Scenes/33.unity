@@ -425,7 +425,7 @@ GameObject:
   - component: {fileID: 1216049994}
   m_Layer: 0
   m_Name: Gumb(Clone)
-  m_TagString: Gumb2
+  m_TagString: Gumb1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -711,7 +711,7 @@ GameObject:
   - component: {fileID: 1439049205}
   m_Layer: 0
   m_Name: Gumb(Clone)
-  m_TagString: Gumb1
+  m_TagString: Gumb2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

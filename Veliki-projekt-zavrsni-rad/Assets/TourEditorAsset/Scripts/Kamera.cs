@@ -70,20 +70,20 @@ public class Kamera : MonoBehaviour
     void Update()
     {
         //#if UNITY_ANDROID
-        if (Input.touchCount > 0)
+        /*if (Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
             rotationX = transform.localEulerAngles.y + touch.deltaPosition.x * sensitivityX/40 * -1;
             rotationY = transform.localEulerAngles.x + touch.deltaPosition.y * sensitivityY/40;
             transform.localEulerAngles = new Vector3(rotationY, rotationX, 0);
-        }
+        }*/
         //#elif UNITY_EDITOR_WIN
-        /*if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0))
         {
             rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * sensitivityX * -1;
             rotationY = transform.localEulerAngles.x + Input.GetAxis("Mouse Y") * sensitivityY;
             transform.localEulerAngles = new Vector3(rotationY, rotationX, 0);
-        }*/
+        }
 //#endif
     }
 }
