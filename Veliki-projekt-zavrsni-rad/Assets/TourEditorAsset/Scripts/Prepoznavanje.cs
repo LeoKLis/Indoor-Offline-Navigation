@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class Prepoznavanje : MonoBehaviour
 {
@@ -13,11 +14,12 @@ public class Prepoznavanje : MonoBehaviour
     private Text tekstNav;
     Pomicanje pomicanje;
     int index;
-
+    ShowToast showToast;
 
     int cilj = -1;
     public Material materijal;
     public Material materijal2;
+    public GameObject not;
     public GameObject tekst;
     string[,] dijkArray = new string[51, 2] { { "1", "WC2" },
                                               { "2", "40" },
@@ -78,10 +80,11 @@ public class Prepoznavanje : MonoBehaviour
             Debug.Log(dijkArray[i, 1]);
         }
         tekst = GameObject.FindGameObjectWithTag("tekst");
-
+        not = GameObject.FindGameObjectWithTag("Notifikacija");
+        not.SetActive(false);
         tekstNav = tekst.GetComponent<Text>();
         Scene scena = SceneManager.GetActiveScene();
-
+        
         Buttons1 = GameObject.FindGameObjectsWithTag("Gumb1");
         Buttons2 = GameObject.FindGameObjectsWithTag("Gumb2");
         Buttons3 = GameObject.FindGameObjectsWithTag("Gumb3");
@@ -163,6 +166,7 @@ public class Prepoznavanje : MonoBehaviour
         // Debug.Log("scena" + scena.name);
         if (myGraph.nodes[cilj].ToString() != scena.name.ToString() + " (Node)")
         {
+            not.SetActive(false);
             foreach (GameObject i in Buttons1)
             {
                 pomicanje = Buttons1[d].GetComponent<Pomicanje>();
@@ -207,9 +211,27 @@ public class Prepoznavanje : MonoBehaviour
         }
         else
         {
+            foreach (GameObject i in Buttons1)
+            {
+                Buttons1[d].GetComponent<MeshRenderer>().material = materijal2;
+            }
+            foreach (GameObject i in Buttons2)
+            {
+                Buttons2[d].GetComponent<MeshRenderer>().material = materijal2;
+            }
+            foreach (GameObject i in Buttons3)
+            {
+                Buttons3[d].GetComponent<MeshRenderer>().material = materijal2;
+            }
+
+
+            not.SetActive(true);
+
             Debug.Log("Stigli ste");
         }
     }
+
+ 
     private void Update()
     {
         Debug.Log(tekstNav.text);
@@ -269,6 +291,7 @@ public class Prepoznavanje : MonoBehaviour
         else
             Put();
     }
+   
 
 }
 

@@ -43,6 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 049f709b794bc50478c6bccdad3fb213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Buttons: []
+  Buttons1: []
+  Buttons2: []
+  Buttons3: []
   myGraph: {fileID: 4162061115437305352, guid: 9dcc2b31d0d6d6b4781685ee36316ce1, type: 3}
-  materijal: {fileID: 2100000, guid: 8796aa67e2209f544915563baa621219, type: 2}
+  materijal: {fileID: 2100000, guid: 9b53270d5560bf54687d434a031f8d85, type: 2}
+  materijal2: {fileID: 2100000, guid: a763f5e32b0a77c43b4b515ac8b6b90f, type: 2}
+  tekst: {fileID: 0}

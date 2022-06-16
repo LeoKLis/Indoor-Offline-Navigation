@@ -12,6 +12,7 @@ TagManager:
   - Gumb2
   - Gumb3
   - tekst
+  - Notifikacija
   layers:
   - Default
   - TransparentFX
