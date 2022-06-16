@@ -5,8 +5,9 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - myGraph: {fileID: 4162061115437305352, guid: 9dcc2b31d0d6d6b4781685ee36316ce1, type: 3}
-  - materijal: {fileID: 2100000, guid: a763f5e32b0a77c43b4b515ac8b6b90f, type: 2}
+  - materijal: {fileID: 2100000, guid: bbe8351739b3d284dbf8a57f3def19a7, type: 2}
   - materijal2: {fileID: 2100000, guid: 9b53270d5560bf54687d434a031f8d85, type: 2}
+  - not: {fileID: 4090469349306241177, guid: 2ab2595a0db61604993cbe0d4e3be288, type: 3}
   - tekst: {fileID: 7961058348297739416, guid: 4ebe7e197bddd8c449f896612691bc88, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}

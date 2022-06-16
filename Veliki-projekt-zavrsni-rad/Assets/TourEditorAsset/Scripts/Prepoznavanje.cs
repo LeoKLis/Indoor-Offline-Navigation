@@ -164,9 +164,9 @@ public class Prepoznavanje : MonoBehaviour
         Path path = myGraph.GetShortestPath(myGraph.nodes[index], myGraph.nodes[cilj]);
         int d = 0;
         // Debug.Log("scena" + scena.name);
+        not.SetActive(false);
         if (myGraph.nodes[cilj].ToString() != scena.name.ToString() + " (Node)")
-        {
-            not.SetActive(false);
+        {            
             foreach (GameObject i in Buttons1)
             {
                 pomicanje = Buttons1[d].GetComponent<Pomicanje>();
